@@ -1,0 +1,60 @@
+raisaneh@lx1-fuxi184:~/k/full_stack_containers/fs-containers$ docker start pensive_taussig 
+pensive_taussig
+raisaneh@lx1-fuxi184:~/k/full_stack_containers/fs-containers$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS         PORTS     NAMES
+64bb5d76e84c   ubuntu    "bash"    17 minutes ago   Up 2 seconds             pensive_taussig
+raisaneh@lx1-fuxi184:~/k/full_stack_containers/fs-containers$ docker kill pensive_taussig 
+pensive_taussig
+raisaneh@lx1-fuxi184:~/k/full_stack_containers/fs-containers$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+raisaneh@lx1-fuxi184:~/k/full_stack_containers/fs-containers$ docker start pensive_taussig -i
+root@64bb5d76e84c:/# vim
+bash: vim: command not found
+root@64bb5d76e84c:/# apt-get update
+Get:1 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [214 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1874 kB]
+Get:7 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [587 kB]
+Get:8 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Packages [13.6 kB]
+Get:9 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [493 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [352 kB]       
+Get:11 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [20.1 MB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [189 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [510 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [14.6 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [371 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [761 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Packages [3306 B]
+Fetched 26.1 MB in 2s (15.6 MB/s)                           
+Reading package lists... Done
+root@64bb5d76e84c:/# apt-get -y install vim
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Solving dependencies... Done
+The following additional packages will be installed:
+  libexpat1 libffi8 libgpm2 libpython3.14 libpython3.14-minimal libpython3.14-stdlib libreadline8t64 libsodium23 libsqlite3-0 media-types netbase readline-common tzdata
+  vim-common vim-runtime xxd
+Suggested packages:
+  gpm readline-doc ctags vim-doc vim-scripts
+The following NEW packages will be installed:
+  libexpat1 libffi8 libgpm2 libpython3.14 libpython3.14-minimal libpython3.14-stdlib libreadline8t64 libsodium23 libsqlite3-0 media-types netbase readline-common tzdata
+  vim vim-common vim-runtime xxd
+0 upgraded, 17 newly installed, 0 to remove and 0 not upgraded.
+Need to get 17.5 MB of archives.
+After this operation, 75.6 MB of additional disk space will be used.
+
+[... installing vim ...]
+
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+Processing triggers for libc-bin (2.43-2ubuntu2.4) ...
+root@64bb5d76e84c:/# vim
+root@64bb5d76e84c:/# vim usr/src/app/index.js 
+root@64bb5d76e84c:/# cat usr/src/app/index.js 
+console.log('Hello World')
+root@64bb5d76e84c:/# 
+
